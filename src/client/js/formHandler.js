@@ -1,9 +1,13 @@
 function handleSubmit(event) {
     event.preventDefault()
-  
     let formText = document.getElementById('formText').value 
-    let isURL=Client.checkForURL(formText)
     
+    if(formText.length==0){
+      alert("you did not input anything")
+      return
+    }
+    let isURL=Client.checkForURL(formText)
+   
     //get key of api
     getKey()
     //get api data
@@ -68,7 +72,7 @@ function handleSubmit(event) {
       const tag =["strong positive", "positive", "neutral",  "negative","strong negative", "without polarity"]
       //find the index of score_tag's value  
       const tag_index = _tag.findIndex(element => element==obj.score_tag);
-      console.log("index:",tag_index)
+      
       //polarity is the tag_index'value
       const polarity = tag[tag_index]
       // show data
