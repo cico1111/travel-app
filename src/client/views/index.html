@@ -10,7 +10,7 @@
 
         <header>
             <div class="">
-                Logo
+                Travel Planner
             </div>
             <div class="">
                 navigation
@@ -18,23 +18,35 @@
         </header>
 
         <main>
-            <section>
-                <form  class="">
-                    <input type="text" id="city">
-                    <input type="text" id="country">
-                    <textarea name="input" id="formText" cols="96" rows="7" placeholder="Name"></textarea>
-                    <input type="submit" name="" value="submit" id="submitForm">
-                </form>
-            </section>
+            
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="agreement"></div>                
-                <div id="confidence"></div>
+            <div class="photo">
+                <strong>photo---</strong>
+                <figure>
+                    <img id="img" src="https://kyoto.travel/en/see-and-do/nt8q320000004wxo-img/nt8q320000004wy5.jpg" alt="Kyoto" >
+                    <figcaption id ="img-fig"></figcaption>
+                </figure>   
+                          
+            </div>
+            <section class="weather">
+                <strong>Weather:</strong>
+                <div id="temp"></div>                
+                <div id="forecast_temp"></div>
                 <div id="irony"></div> 
                 <div id="score_tag"></div> 
                 <div id="subjectivity"></div>
             </section>
+            <div class="add-trip">
+                <form  class="">                 
+                    <label for="city">My trip to:</label>
+                    <input type="text" id="city" placeholder="place/city">
+                    <input type="text" id="country" placeholder="country">
+                    <label for="date">Departing:</label>
+                    <input type="date" id="date">
+                    <input type="submit" name="" value="add trip" id="submitForm">
+                    <input type="submit" name="" value="remove trip" id="removeTr">
+                </form>
+            </div>
         </main>
 
         <footer>

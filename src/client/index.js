@@ -6,13 +6,8 @@ import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
-// window.onload = function() {
-//     console.log("onloading!!!!")
-//   }
 
-  const submit = document.querySelector("#submitForm");
-  submit.addEventListener('click', (e)=>{ alert("click!!!!")
-  handleSubmit(e)
-})
+  const submit = document.querySelector("#submitForm")
+  submit.addEventListener('click', e=>  handleSubmit(e))
  
 export {checkForURL, handleSubmit}

@@ -15,7 +15,7 @@ import {getImage} from './getImage'
             console.log( "lng-geoNames",geoData.geonames[0].lng)
             console.log( "lat-geoNames",geoData.geonames[0].lat)
             getWeather(geoData.geonames[0].lat, geoData.geonames[0].lng)
-            getImage(geoData.geonames[0].name)
+            getImage(geoData.geonames[0].name, geoData.geonames[0].countrycode)
       
   
         

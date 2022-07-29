@@ -6,9 +6,17 @@ body {
 
 main {
     flex: 2;
+    background-color: darkorange;
 }
 
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+form {
+    display: inline-block;
+}
+img{
+    width: 100%;
+    padding: 1em;
 }
