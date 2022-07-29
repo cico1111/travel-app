@@ -1,19 +1,23 @@
+import {getGeo} from './geoNames'
+
 function handleSubmit(event) {
+  console.log("qqqqqqqqqq")
     event.preventDefault()
     let formText = document.getElementById('formText').value 
     
-    if(formText.length==0){
-      alert("you did not input anything")
-      return
-    }
+    // if(formText.length==0){
+    //   alert("you did not input anything")
+    //   return
+    // }
     let isURL=Client.checkForURL(formText)
    
-    //get key of api
-    getKey()
-    //get api data
-    .then(key=>getApiData(key,formText,isURL))
+    // //get key of api
+    // getKey()
+    // //get api data
+    // .then(key=>getApiData(key,formText,isURL))
+ getGeo()
    
-  
+
     //function of getting api key
     async function getKey() {
       const response = await fetch("/key");
