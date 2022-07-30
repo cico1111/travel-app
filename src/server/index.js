@@ -28,6 +28,15 @@ app.listen(port, function () {
 app.get('/', function (req, res) {
   res.sendFile('dist/index.html')
   })
-app.get('/key', function (req, res) {
-  res.send({key: process.env.API_KEY})
+app.get('/user', function (req, res) {  
+
+  const user = process.env.USER_NAME
+  console.log(user)
+  res.send({key: user})
+})
+app.get('/image', function (req, res) {
+  res.send({key: process.env.IMAGE_API_KEY})
+})
+app.get('/weather', function (req, res) {
+  res.send({key: process.env.WEATHER_API_Key})
 })
