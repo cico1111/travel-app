@@ -1,45 +1,52 @@
 body {
     min-height: 100vh;
-   
-   
-}
-.container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px auto 3em;
+    grid-template-rows: 70px auto 1.5em;
     grid-template-areas: 
     "hd"    
     "main"
     "ft";
 }
+   
+
+    
 main {
     background-color: bisque;
    display: grid;
-   grid-template-columns: 50% 50% ;
-   grid-template-rows: 100px auto 100px   ;
+   grid-template-columns: 1fr ;
+   grid-template-rows: auto auto auto 1fr  ;
    grid-template-areas:
-   "img depart" 
-   "img info"
-   "add-trip add-trip"  ;
+   "img " 
+   "depart" 
+   "info"
+   "add-trip"  ;
    
     grid-area: main;
 }
 .photo{
-   border: 1px solid red;
   
+  margin: 1em;
+  padding: 1em;
     grid-area: img;
 }
 
 #departing{
     grid-area: depart;
+    margin: 1em;
+    padding: 1em;
 }
 .info{
     background-color: lightskyblue;
     grid-area: info;
+    margin: 1em;
+    padding: 1em;
 }
 .add-trip{
     background-color: pink;
     grid-area: add-trip; 
+    margin: 1em;
+    padding: 1em;
 }
 section {
     max-width: 800px;
@@ -51,5 +58,29 @@ form {
 img{
     
     width: 100%;
-    padding: 1em;
+  
 }
+@media (min-width:900px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px auto 3em;
+        grid-template-areas: 
+        "hd"    
+        "main"
+        "ft";
+    }
+    main {
+        background-color: bisque;
+       display: grid;
+       grid-template-columns: 50% 50% ;
+       grid-template-rows: 100px auto auto   ;
+       grid-template-areas:
+       "img depart" 
+       "img info"
+       "add-trip add-trip"  ;
+       
+        grid-area: main;
+    }
+}
+    
