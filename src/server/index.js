@@ -31,7 +31,6 @@ app.get('/', function (req, res) {
 app.get('/user', function (req, res) {  
 
   const user = process.env.USER_NAME
-  console.log(user)
   res.send({key: user})
 })
 app.get('/image', function (req, res) {

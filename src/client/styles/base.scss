@@ -1,14 +1,46 @@
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
+   
+   
 }
-
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto 3em;
+    grid-template-areas: 
+    "hd"    
+    "main"
+    "ft";
+}
 main {
-    flex: 2;
-    background-color: darkorange;
+    background-color: bisque;
+   display: grid;
+   grid-template-columns: 50% 50% ;
+   grid-template-rows: 100px auto 100px   ;
+   grid-template-areas:
+   "img depart" 
+   "img info"
+   "add-trip add-trip"  ;
+   
+    grid-area: main;
+}
+.photo{
+   border: 1px solid red;
+  
+    grid-area: img;
 }
 
+#departing{
+    grid-area: depart;
+}
+.info{
+    background-color: lightskyblue;
+    grid-area: info;
+}
+.add-trip{
+    background-color: pink;
+    grid-area: add-trip; 
+}
 section {
     max-width: 800px;
     margin: 50px auto;
@@ -17,6 +49,7 @@ form {
     display: inline-block;
 }
 img{
+    
     width: 100%;
     padding: 1em;
 }
