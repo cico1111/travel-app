@@ -1,34 +1,33 @@
-body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px auto 1.5em;
-    grid-template-areas: 
-    "hd"    
-    "main"
-    "ft";
-}
-   
 
-    
-main {
-    background-color: bisque;
-   display: grid;
-   grid-template-columns: 1fr ;
-   grid-template-rows: auto auto auto 1fr  ;
-   grid-template-areas:
-   "img " 
-   "depart" 
-   "info"
-   "add-trip"  ;
-   
+
+body {
+    margin:0;
+    display:grid;
+    grid-template:
+        "hd" auto      
+        "main" auto
+        "footer" auto /  1fr  ;    
+}
+main{
     grid-area: main;
+    background-color: rgb(200, 238, 250);   
+    
+    display: grid;
+    grid-template: 
+    "photo" auto
+    "depart"  min-content 
+    "info"  min-content 
+    "add-trip" 1fr / 1fr;      
+}    
+
+header{
+    grid-area: hd;
 }
 .photo{
   
   margin: 1em;
   padding: 1em;
-    grid-area: img;
+  grid-area: photo;
 }
 
 #departing{
@@ -37,50 +36,32 @@ main {
     padding: 1em;
 }
 .info{
-    background-color: lightskyblue;
+  
     grid-area: info;
     margin: 1em;
     padding: 1em;
 }
 .add-trip{
     background-color: pink;
-    grid-area: add-trip; 
+   grid-area: add-trip;
     margin: 1em;
     padding: 1em;
 }
-section {
-    max-width: 800px;
-    margin: 50px auto;
-}
-form {
-    display: inline-block;
-}
-img{
-    
+
+img{    
     width: 100%;
-  
+    min-width: 150px;
 }
-@media (min-width:900px) {
-    body{
+
+@media (min-width:901px) { 
+    main {       
+      
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 150px auto 3em;
-        grid-template-areas: 
-        "hd"    
-        "main"
-        "ft";
+        grid-template: 
+        "photo depart" auto        
+        "photo info"  auto  
+        "add-trip add-trip" 1fr / 1fr 1fr;
     }
-    main {
-        background-color: bisque;
-       display: grid;
-       grid-template-columns: 50% 50% ;
-       grid-template-rows: 100px auto auto   ;
-       grid-template-areas:
-       "img depart" 
-       "img info"
-       "add-trip add-trip"  ;
-       
-        grid-area: main;
-    }
+   
 }
     

@@ -1,7 +1,7 @@
 import {getGeo} from './geoNames'
 
 function handleSubmit(event) {
-    console.log("qqqqqqqqqq") 
+    
     event.preventDefault()
 
     //get city from index.html

@@ -15,8 +15,7 @@ const getWeather = async(lat, lng, forcast_flag) => {
 
         // get current weather data
         getAPI(weather_URL).then(res =>{ 
-            const weatherData = res
-            console.log(weatherData)
+            const weatherData = res         
             weather.innerHTML = `Current Temperature : <br>${weatherData.data[0].temp}  °C `
                      
         })
