@@ -25,6 +25,7 @@ The app will include a simple form where you enter the location you are travelin
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
+    "supertest": "^6.2.4",
     "terser-webpack-plugin": "^4.2.3",
     "webpack-dev-server": "^4.9.3"
   }
