@@ -10,6 +10,6 @@ input, select  {
     margin: 10px 0;
 }
 
-form :hover{
-    background-color: aqua;
+form select:hover, input:hover{
+    background-color: rgb(187, 236, 239);
 }
