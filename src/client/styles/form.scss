@@ -1,7 +1,9 @@
 form {
     border-radius: 3px;  
 }
-
+form div{
+    display: inline-block;
+}
 input, select  {
     padding: 5px 10px;
     width: 150px;

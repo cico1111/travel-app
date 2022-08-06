@@ -19,10 +19,10 @@ app.use(cors());
 
 
 // designates what port the app will listen to for incoming requests
-const port = 8080
-app.listen(port, function () {
-    console.log(`Example app listening on port ${port}!`)
-})
+// const port = 8080
+// app.listen(port, function () {
+//     console.log(`Example app listening on port ${port}!`)
+// })
 
 
 app.get('/', function (req, res) {
@@ -39,3 +39,7 @@ app.get('/image', function (req, res) {
 app.get('/weather', function (req, res) {
   res.send({key: process.env.WEATHER_API_Key})
 })
+app.get('/test', async (req, res) => {
+  res.json({message: 'pass!'})
+})
+module.exports = app

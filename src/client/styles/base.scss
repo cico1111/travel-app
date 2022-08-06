@@ -1,23 +1,15 @@
-
-
 body {
     margin:0;
+    width: auto;
     display:grid;
     grid-template:
-        "hd" auto      
+        "hd" 1fr     
         "main" auto
-        "footer" auto /  1fr  ;    
+        "footer" 1em /  1fr  ;    
 }
 main{
     grid-area: main;
-    background-color: rgb(200, 238, 250);   
-    
-    display: grid;
-    grid-template: 
-    "photo" auto
-    "depart"  min-content 
-    "info"  min-content 
-    "add-trip" 1fr / 1fr;      
+    background-color: rgb(200, 238, 250);          
 }    
 
 header{
@@ -63,5 +55,4 @@ img{
         "add-trip add-trip" 1fr / 1fr 1fr;
     }
    
-}
-    
+} 
