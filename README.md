@@ -46,4 +46,4 @@ Open http://localhost:3000 to view it in the browser.
 ## Run unit tests
 $ npm test
 
-
+https://cico1111.github.io/travel-app/dist/index.html
